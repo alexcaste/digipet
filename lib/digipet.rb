@@ -76,5 +76,5 @@ class DigiPet
     @amount
     # "#{@amount} half minutes have passed since last update."
   end
-  self.new("Booger")
+  # self.new("Booger")
 end
