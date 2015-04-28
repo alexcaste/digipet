@@ -22,4 +22,10 @@ class DigiPet
     @active_lvl
   end
 
+  define_method(:time_passes) do
+    @food_lvl -= 1
+    @sleep_lvl -= 1
+    @active_lvl -= 1
+  end
+
 end
