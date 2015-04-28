@@ -18,6 +18,15 @@ describe(DigiPet) do
       my_pet = DigiPet.new("lil dragon")
       my_pet.time_passes()
       expect(my_pet.food_lvl()).to(eq(9))
+      expect(my_pet.sleep_lvl()).to(eq(9))
+      expect(my_pet.active_lvl()).to(eq(9))
+    end
+  end
+
+  describe("#alive") do
+    it("checks to see if DigitPet levels are above zero") do
+      my_pet = DigiPet.new("lil dragon")
+      expect(my_pet.alive()).to(eq(true))
     end
   end
 end
