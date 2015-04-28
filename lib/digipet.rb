@@ -54,11 +54,12 @@ class DigiPet
   end
 
   define_method(:update) do
-    this_update = Time.now.to_i
+    this_update = Time.now.to_i.+(60)
     @amount = (this_update.-(@last_update))/30
     @amount >= 1 ? self.time_passes : nil
     @last_update = Time.now.to_i
-    "#{@amount} half minutes have passed since last update."
+    @amount
+    # "#{@amount} half minutes have passed since last update."
   end
 
 end

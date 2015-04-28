@@ -31,9 +31,16 @@ describe(DigiPet) do
 
     it("checks to see if DigiPet is dead because levels are at zero") do
       my_pet = DigiPet.new("lil dragon")
-      my_pet.feed(-10)
+      10.times { my_pet.time_passes }
       expect(my_pet.alive()).to(eq(false))
     end
   end
+
+    describe('#update') do
+      it("down increments each pet level by 1 every 30 seconds") do
+        my_pet = DigiPet.new("lil dragon")
+        expect(my_pet.update()).to(eq(2))
+      end
+    end
 
 end
