@@ -28,4 +28,10 @@ class DigiPet
     @active_lvl -= 1
   end
 
+  define_method(:alive) do
+    return (@food_lvl > 0 &&
+            @sleep_lvl > 0 &&
+            @active_lvl > 0) ? true : false
+  end
+
 end
