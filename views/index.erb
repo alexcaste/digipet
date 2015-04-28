@@ -1,0 +1,18 @@
+<h1>DigiPet</h1>
+
+<p>Here is your pet:</p>
+
+<ul>
+  <h4>Name: <%= @pet_name %></h4>
+    
+
+</ul>
+
+<p>Take an action:</p>
+
+<form action="/actions" method="post">
+  <label for="act_made">feed, sleep, play?</label>
+  <input id="act_made" name="act_made" type="text">
+
+  <button type="submit">Take action</button>
+</form>
