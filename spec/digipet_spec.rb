@@ -28,5 +28,12 @@ describe(DigiPet) do
       my_pet = DigiPet.new("lil dragon")
       expect(my_pet.alive()).to(eq(true))
     end
+
+    it("checks to see if DigiPet is dead because levels are at zero") do
+      my_pet = DigiPet.new("lil dragon")
+      my_pet.feed(-10)
+      expect(my_pet.alive()).to(eq(false))
+    end
   end
+
 end
