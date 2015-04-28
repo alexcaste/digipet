@@ -39,6 +39,7 @@ describe(DigiPet) do
     describe('#update') do
       it("down increments each pet level by 1 every 30 seconds") do
         my_pet = DigiPet.new("lil dragon")
+        
         expect(my_pet.update()).to(eq(2))
       end
     end
