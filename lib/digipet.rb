@@ -43,9 +43,9 @@ class DigiPet
   end
 
   define_method(:time_passes) do
-    @food_lvl -= @amount
-    @sleep_lvl -= @amount
-    @active_lvl -= @amount
+    @food_lvl -= @amount || 1
+    @sleep_lvl -= @amount || 1
+    @active_lvl -= @amount || 1
   end
 
   define_method(:alive) do
